@@ -4,6 +4,8 @@ import { DashboardSharedModule } from 'projects/dashboard/src/app/app.module';
 import { ChatSharedModule } from 'projects/chat/src/app/app.module';
 import { DashboardAppComponent } from 'projects/dashboard/src/app/app.component';
 import { ChatAppComponent } from 'projects/chat/src/app/app.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -12,7 +14,12 @@ const routes: Routes = [
   },
   {
     path: 'chat',
-    component: ChatAppComponent
+    component: ChatAppComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'not-found',
+    component: NotFoundComponent
   },
   {
     path: '**',

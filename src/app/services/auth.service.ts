@@ -9,7 +9,7 @@ export class AuthService {
   constructor() { }
 
   public isRouteAccessible():boolean{
-    return false;
+    return true;
   }
 
   public setIsAccessible(isAccessible:boolean):void{
