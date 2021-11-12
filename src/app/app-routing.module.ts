@@ -8,7 +8,7 @@ const routes: Routes = [
    loadChildren: '../../projects/dashboard/src/app/app.module#DashboardSharedModule'},
   {path: 'chat',
    loadChildren: '../../projects/chat/src/app/app.module#ChatSharedModule'},
-  { path: '**', redirectTo: '/dashboard/one'}
+  { path: '**', redirectTo: '/dashboard'}
  ];
 
 @NgModule({
