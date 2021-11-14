@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { View1Component } from './view1/view1.component';
+import { DashboardAppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: 'child', component: View1Component },
- ];
+  { path: '', component: DashboardAppComponent },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,5 +1,5 @@
+import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardAppComponent } from './app.component';
@@ -11,13 +11,13 @@ import { View1Component } from './view1/view1.component';
     View1Component,
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     AppRoutingModule
   ],
   providers: [],
   bootstrap: [DashboardAppComponent]
 })
-export class AppModule { }
+export class DashboardModule { }
 
 @NgModule({})
 export class DashboardSharedModule{
@@ -25,7 +25,7 @@ export class DashboardSharedModule{
   static forRoot(): ModuleWithProviders<Object> {
 
     return {
-      ngModule: AppModule,
+      ngModule: DashboardModule,
       providers: []
     }
   }
